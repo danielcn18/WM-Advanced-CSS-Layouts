@@ -107,7 +107,7 @@ body{
 .comment>.comment-title{
     font-weight: bold;
     font-size: 15px;
-}
+} 
 .comment>.comment-text{
     font-size: 13px;
     align-self: flex-start;
