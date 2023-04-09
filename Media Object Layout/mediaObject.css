@@ -5,6 +5,10 @@ body{
     margin: 0;
     padding: 0;
 }
+:root {
+    --gridBackgroundColor: #2d4aa4;
+    --commentBackgroundColor: #d2ddfc; 
+}
 #contain{
     height: 92vh;
     width: 92vw;
@@ -17,7 +21,7 @@ body{
     height: 28vh;
     width: 34vw;
     padding: 1vh 1vw;
-    background-color: #2d4aa4;
+    background-color: var(--gridBackgroundColor);
     margin: auto;
     overflow-y: auto;
     display: grid;
@@ -78,9 +82,9 @@ body{
     height: auto;
     min-height: 64px;
     width: 100%;
-    background-color: #d2ddfc;
+    background-color: var(--commentBackgroundColor);
     display: grid;
-    padding: 4px 0;
+    padding-top: 4px;
     grid-template-columns: 60px 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 3px;
@@ -98,6 +102,7 @@ body{
 }
 .comment-title, .comment-text{
     color: black;
+    height: auto;
 }
 .comment>.comment-title{
     font-weight: bold;
@@ -106,4 +111,10 @@ body{
 .comment>.comment-text{
     font-size: 13px;
     align-self: flex-start;
+}
+.comments>.comment-spacing{
+    width: 100%;
+    grid-column: 1/3;
+    padding-bottom: 1px;
+    background-color: var(--gridBackgroundColor);
 }
