@@ -1,0 +1,109 @@
+html{
+    background-image: linear-gradient(to right, #82bfe6, #4770a4);
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#contain{
+    height: 92vh;
+    width: 92vw;
+    margin: 4vh auto 0 auto;
+    background-color: white;
+    display: flex;
+    align-content: center;
+}
+.grid-contain{
+    height: 28vh;
+    width: 34vw;
+    padding: 1vh 1vw;
+    background-color: #2d4aa4;
+    margin: auto;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 74px;
+    grid-row-gap: 10px;
+}
+.grid-contain::-webkit-scrollbar{
+    display: none;
+}
+.grid-contain>.post{
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.post>.post-image{
+    height: 60px;
+    width: 60px;
+    grid-column: 1/2;
+    grid-row: span 2;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 100px;
+}
+.post>.post-title{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 18px;
+    font-weight: bold
+}
+.post>.post-text{
+    grid-column: 2;
+    grid-row: 2;
+}
+.grid-contain>.comments{
+    height: auto;
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.comments>.comment{
+    grid-column: 2/3;
+    grid-row: span 2;
+    height: auto;
+    min-height: 64px;
+    width: 100%;
+    background-color: #d2ddfc;
+    display: grid;
+    padding: 4px 0;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 3px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.comment>.comment-image{
+    height: 38px;
+    width: 38px;
+    grid-column: 1/2;
+    grid-row: span 2;
+    background-repeat: no-repeat;
+    margin: 0 auto 14px auto;
+    border-radius: 100px;
+}
+.comment-title, .comment-text{
+    color: black;
+}
+.comment>.comment-title{
+    font-weight: bold;
+    font-size: 15px;
+}
+.comment>.comment-text{
+    font-size: 13px;
+    align-self: flex-start;
+}
